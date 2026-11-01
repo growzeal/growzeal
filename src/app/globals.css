@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 
 :root {
@@ -15,6 +16,11 @@
   --brand-amber-deep: #D98A1F;
   --brand-cyan: #2FB4C9;
   --brand-violet: #5B4CFB;
+
+  /* Local font fallbacks: no Google Fonts download required */
+  --font-space-grotesk: "Trebuchet MS", Arial, sans-serif;
+  --font-inter: Arial, Helvetica, sans-serif;
+  --font-plex-mono: "Courier New", monospace;
 }
 
 @theme inline {
@@ -54,6 +60,7 @@ body {
   font-family: var(--font-mono), monospace;
 }
 
+/* Accessibility: honor reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.001ms !important;
@@ -61,7 +68,6 @@ body {
     transition-duration: 0.001ms !important;
   }
 }
-
 
 /* ==========================================
    GrowZeal — DYNAMIC HERO BACKGROUND
