@@ -387,5 +387,5 @@ export const socials = [
   { label: "Instagram", href: "https://instagram.com/GrowZealofficial" },
   { label: "LinkedIn", href: "https://www.linkedin.com/company/3-skill/" },
   { label: "YouTube", href: "https://www.youtube.com/@threeskill" },
-  { label: "X", href: "https://twitter.com/Triqon" },
+  { label: "X", href: "https://twitter.com/GrowZeal" },
 ];

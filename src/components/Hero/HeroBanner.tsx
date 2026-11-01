@@ -5,7 +5,6 @@ import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowRight,
   ArrowUpRight,
-  BadgeCheck,
   BriefcaseBusiness,
   Code2,
   GraduationCap,
@@ -143,7 +142,7 @@ export default function HeroBanner() {
 
       <div className="mx-auto grid min-h-[680px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-2 lg:gap-8 lg:px-12 lg:py-20">
         {/* Left: Hero content */}
-        <div className="relative z-10 max-w-2xl">
+        <div className="relative z-10 w-full max-w-2xl lg:justify-self-start">
           <motion.div
             initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -154,19 +153,65 @@ export default function HeroBanner() {
             PRACTICAL LEARNING FOR STUDENTS
           </motion.div>
 
+          {/* Responsive hero heading */}
           <motion.h1
             id="hero-heading"
             initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-4xl font-black leading-[1.12] tracking-tight sm:text-5xl lg:text-6xl xl:text-[68px]"
+            className="
+              mx-auto
+              w-full
+              text-center
+              text-[clamp(1.85rem,4.8vw,4.5rem)]
+              font-black
+              leading-[1.12]
+              tracking-[-0.04em]
+              sm:leading-[1.08]
+              lg:mx-0
+              lg:text-left
+              lg:text-[clamp(2.4rem,3.7vw,3.8rem)]
+            "
           >
-            Build Skills.
-            <br />
-            Learn Through
-            <br />
-            <span className="bg-gradient-to-r from-cyan-300 via-sky-300 to-violet-400 bg-clip-text text-transparent">
-              Real Projects.
+            <span className="block">
+              <motion.span
+                className="
+                  inline-block
+                  bg-gradient-to-r
+                  from-cyan-300
+                  via-sky-300
+                  to-violet-400
+                  bg-clip-text
+                  text-transparent
+                "
+                animate={
+                  shouldReduceMotion
+                    ? {}
+                    : {
+                        backgroundPosition: [
+                          "0% 50%",
+                          "100% 50%",
+                          "0% 50%",
+                        ],
+                      }
+                }
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                style={{ backgroundSize: "200% 200%" }}
+              >
+                India’s
+              </motion.span>
+            </span>
+
+            <span className="block whitespace-nowrap">
+              Industry-Structured
+            </span>
+
+            <span className="block whitespace-nowrap">
+              Internship Program
             </span>
           </motion.h1>
 
@@ -200,7 +245,7 @@ export default function HeroBanner() {
             </Link>
 
             <Link
-              href="#how-it-works"
+              href="#JourneySection"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:bg-white/[0.08]"
             >
               How It Works
