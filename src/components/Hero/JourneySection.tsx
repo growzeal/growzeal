@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
@@ -25,7 +24,7 @@ const steps = [
   {
     number: "01",
     title: "Register",
-    description: "Start your journey with registration and onboarding.",
+    description: "Register for a program that matches your interests.",
     detail: "Registration & onboarding",
     icon: Wallet,
     color: "from-cyan-300 to-teal-400",
@@ -33,7 +32,7 @@ const steps = [
   {
     number: "02",
     title: "Get Started",
-    description: "Understand your program, roadmap, and goals.",
+    description: "Understand your program, learning roadmap, and goals.",
     detail: "Program orientation",
     icon: GraduationCap,
     color: "from-violet-400 to-indigo-400",
@@ -42,7 +41,7 @@ const steps = [
     number: "03",
     title: "Learn Together",
     description:
-      "Develop skills through guided learning and collaboration.",
+      "Develop relevant skills through guided learning and collaboration.",
     detail: "Guided learning",
     icon: Users,
     color: "from-teal-300 to-emerald-400",
@@ -50,15 +49,15 @@ const steps = [
   {
     number: "04",
     title: "Build Projects",
-    description: "Turn your knowledge into practical project work.",
+    description: "Apply your knowledge through practical project work.",
     detail: "Hands-on deliverables",
     icon: Code2,
     color: "from-sky-300 to-cyan-400",
   },
   {
     number: "05",
-    title: "Get Certified",
-    description: "Complete the applicable program requirements.",
+    title: "Complete the Program",
+    description: "Work toward completing the applicable program requirements.",
     detail: "Certificate eligibility",
     icon: BadgeCheck,
     color: "from-emerald-300 to-teal-400",
@@ -106,9 +105,9 @@ const outcomes = [
 ];
 
 const progressItems = [
-  { number: "01–02", label: "Get Started" },
+  { number: "01–02", label: "Register & Get Started" },
   { number: "03–04", label: "Learn & Build" },
-  { number: "05–06", label: "Move Forward" },
+  { number: "05–06", label: "Complete & Move Forward" },
 ];
 
 export default function JourneySection() {
@@ -204,8 +203,8 @@ export default function JourneySection() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-slate-400 sm:mt-5 sm:text-base sm:leading-7">
-            A clear path from getting started to building practical
-            experience.
+            Explore a program, develop practical skills, and build experience
+            through project work.
           </p>
         </motion.div>
 
@@ -222,7 +221,10 @@ export default function JourneySection() {
           <div className="relative flex min-w-0 flex-col gap-5 sm:gap-6 md:flex-row md:items-center md:justify-between">
             <div className="flex min-w-0 items-start gap-3 sm:items-center sm:gap-4">
               <div className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-cyan-300/20 bg-cyan-300/[0.07] sm:h-14 sm:w-14 sm:rounded-2xl">
-                <Rocket size={23} className="text-cyan-300 sm:h-[25px] sm:w-[25px]" />
+                <Rocket
+                  size={23}
+                  className="text-cyan-300 sm:h-[25px] sm:w-[25px]"
+                />
                 <span className="absolute -right-1 -top-1 h-3 w-3 rounded-full border-2 border-[#0A1425] bg-violet-400" />
               </div>
 
@@ -309,7 +311,11 @@ export default function JourneySection() {
                       <div
                         className={`flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br ${step.color} text-[#050B18] transition-transform duration-300 group-hover:scale-105 sm:h-11 sm:w-11 sm:rounded-xl`}
                       >
-                        <Icon size={20} strokeWidth={2.2} className="sm:hidden" />
+                        <Icon
+                          size={20}
+                          strokeWidth={2.2}
+                          className="sm:hidden"
+                        />
                         <Icon
                           size={22}
                           strokeWidth={2.2}

@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -19,8 +18,8 @@ import {
 
 const outcomes = [
   {
-    title: "Industrial Project Experience",
-    description: "Work on practical development challenges",
+    title: "Practical Project Work",
+    description: "Apply concepts by working on projects",
     icon: Code2,
     color: "text-cyan-300",
     glow: "bg-cyan-400/10",
@@ -28,27 +27,27 @@ const outcomes = [
     delay: 0.1,
   },
   {
-    title: "Internship Certificate",
-    description: "Recognition of program completion",
-    icon: BadgeCheck,
+    title: "Structured Learning",
+    description: "Build skills through guided activities",
+    icon: GraduationCap,
     color: "text-violet-300",
     glow: "bg-violet-400/10",
     position: "right-0 top-[12%]",
     delay: 0.3,
   },
   {
-    title: "Mentor Guidance",
-    description: "Learn with structured expert support",
-    icon: Users,
+    title: "Project Portfolio",
+    description: "Showcase work you have completed",
+    icon: Layers3,
     color: "text-emerald-300",
     glow: "bg-emerald-400/10",
     position: "left-0 bottom-[14%]",
     delay: 0.5,
   },
   {
-    title: "Portfolio-Ready Projects",
-    description: "Build work you can showcase",
-    icon: Layers3,
+    title: "Career Preparation",
+    description: "Connect learning with career goals",
+    icon: Users,
     color: "text-sky-300",
     glow: "bg-sky-400/10",
     position: "right-0 bottom-[14%]",
@@ -57,12 +56,9 @@ const outcomes = [
 ];
 
 const floatingTags = [
-  { label: "Industry-Ready Skills", icon: Rocket },
-  { label: "Real-World Projects", icon: Workflow },
-  { label: "Mentorship-Driven Learning", icon: GraduationCap },
-  { label: "Industry Experience Certificate", icon: BadgeCheck },
-  { label: "PPO Opportunity", icon: BriefcaseBusiness },
-  
+  { label: "Student Internship Programs", icon: BriefcaseBusiness },
+  { label: "Practical Project Work", icon: Workflow },
+  { label: "Skill Development", icon: GraduationCap },
 ];
 
 export default function HeroBanner() {
@@ -81,8 +77,11 @@ export default function HeroBanner() {
   };
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#050B18] text-white">
-      {/* Dynamic background */}
+    <section
+      aria-labelledby="hero-heading"
+      className="relative isolate overflow-hidden bg-[#050B18] text-white"
+    >
+      {/* Background effects */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_20%,rgba(109,74,255,0.16),transparent_40%),radial-gradient(ellipse_at_85%_55%,rgba(34,211,238,0.12),transparent_40%)]" />
 
@@ -92,8 +91,7 @@ export default function HeroBanner() {
             backgroundImage:
               "linear-gradient(rgba(148,163,184,0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.16) 1px, transparent 1px)",
             backgroundSize: "48px 48px",
-            maskImage:
-              "linear-gradient(to bottom, black, transparent 95%)",
+            maskImage: "linear-gradient(to bottom, black, transparent 95%)",
           }}
         />
 
@@ -144,31 +142,28 @@ export default function HeroBanner() {
       </div>
 
       <div className="mx-auto grid min-h-[680px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-2 lg:gap-8 lg:px-12 lg:py-20">
-        {/* LEFT: Hero content */}
+        {/* Left: Hero content */}
         <div className="relative z-10 max-w-2xl">
           <motion.div
-            initial={
-              shouldReduceMotion ? false : { opacity: 0, y: 12 }
-            }
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="mb-7 inline-flex items-center gap-2 rounded-full border border-violet-400/25 bg-violet-400/[0.08] px-4 py-2 text-xs font-semibold tracking-wide text-violet-200 sm:text-sm"
           >
             <Sparkles size={15} className="text-cyan-300" />
-            LEARN WITH PURPOSE. BUILD WITH IMPACT.
+            PRACTICAL LEARNING FOR STUDENTS
           </motion.div>
 
           <motion.h1
-            initial={
-              shouldReduceMotion ? false : { opacity: 0, y: 20 }
-            }
+            id="hero-heading"
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-4xl font-black leading-[1.12] tracking-tight sm:text-5xl lg:text-6xl xl:text-[68px]"
           >
-            Learn with Mentors.
+            Build Skills.
             <br />
-            Contribute to
+            Learn Through
             <br />
             <span className="bg-gradient-to-r from-cyan-300 via-sky-300 to-violet-400 bg-clip-text text-transparent">
               Real Projects.
@@ -176,23 +171,19 @@ export default function HeroBanner() {
           </motion.h1>
 
           <motion.p
-            initial={
-              shouldReduceMotion ? false : { opacity: 0, y: 15 }
-            }
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 max-w-xl text-base leading-8 text-slate-300 sm:text-lg"
           >
-            Turn what you learn into what you can build. Develop practical
-            skills, work on meaningful projects, and take the next step
-            toward your career with GrowZeal.
+            GrowZeal helps students connect classroom learning with practical
+            work through internship programs, skill development, and project-based
+            learning. Explore a program that fits your interests and career goals.
           </motion.p>
 
           {/* Primary actions */}
           <motion.div
-            initial={
-              shouldReduceMotion ? false : { opacity: 0, y: 12 }
-            }
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-8 flex flex-col gap-4 sm:flex-row"
@@ -212,16 +203,14 @@ export default function HeroBanner() {
               href="#how-it-works"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:bg-white/[0.08]"
             >
-              Discover How It Works
+              How It Works
               <ArrowUpRight size={17} />
             </Link>
           </motion.div>
 
-          {/* Career outcomes */}
+          {/* Key themes */}
           <motion.div
-            initial={
-              shouldReduceMotion ? false : { opacity: 0, y: 12 }
-            }
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-10 flex flex-wrap gap-2.5"
@@ -242,13 +231,13 @@ export default function HeroBanner() {
           </motion.div>
 
           <p className="mt-5 max-w-xl text-[11px] leading-5 text-slate-500">
-            Certificate issuance is subject to applicable program
-            requirements. PPO opportunities, where applicable, depend on
-            eligibility and selection and are not guaranteed.
+            Program structure, fees, certificates, and other outcomes depend on
+            the specific program and its applicable terms. Review the program
+            details before applying.
           </p>
         </div>
 
-        {/* RIGHT: Custom Innovation Orbit */}
+        {/* Right: Innovation orbit */}
         <div className="relative mx-auto flex min-h-[480px] w-full max-w-[590px] items-center justify-center sm:min-h-[540px]">
           {/* Orbit glow */}
           <div className="absolute h-72 w-72 rounded-full bg-cyan-400/[0.07] blur-3xl sm:h-96 sm:w-96" />
@@ -392,7 +381,7 @@ export default function HeroBanner() {
             );
           })}
 
-          {/* PPO signal */}
+          {/* Program opportunity note */}
           <motion.div
             animate={
               shouldReduceMotion
@@ -403,13 +392,13 @@ export default function HeroBanner() {
             className="absolute left-1/2 top-[1%] z-20 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-violet-300/20 bg-[#11142B]/95 px-3 py-2 text-[9px] font-bold uppercase tracking-wider text-violet-200 sm:text-[10px]"
           >
             <BriefcaseBusiness size={13} className="text-violet-300" />
-            PPO Opportunity
+            Explore Opportunities
           </motion.div>
 
           {/* Bottom signal */}
           <div className="absolute bottom-[1%] left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-cyan-300/20 bg-[#09182D]/95 px-3 py-2 text-[9px] font-bold uppercase tracking-wider text-cyan-100 sm:text-[10px]">
             <Rocket size={13} className="text-cyan-300" />
-            From Learning to Building
+            Learn Through Practice
           </div>
         </div>
       </div>

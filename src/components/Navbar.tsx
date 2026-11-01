@@ -19,7 +19,7 @@ const navLinks = [
   },
   {
     label: "Why GrowZeal",
-    href: "/#why-Triqon",
+    href: "#why-growzeal",
     section: "why-Triqon",
   },
   { label: "Contact", href: "/contact", section: "" },

@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
@@ -8,7 +7,6 @@ import {
   Code2,
   GraduationCap,
   BadgeCheck,
-  BriefcaseBusiness,
   TrendingUp,
 } from "lucide-react";
 import Link from "next/link";
@@ -29,7 +27,7 @@ const highlights = [
   },
   {
     label: "PPO Opportunity",
-    icon: BriefcaseBusiness,
+    icon: TrendingUp,
   },
 ];
 
@@ -39,7 +37,7 @@ export default function FinalCTASection() {
   return (
     <section
       id="final-cta"
-      className="relative isolate overflow-hidden bg-[#050B18] px-4 py-20 text-white sm:px-6 sm:py-24 lg:px-8 lg:py-28"
+      className="relative isolate overflow-hidden bg-[#050B18] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-24"
     >
       {/* BACKGROUND ATMOSPHERE */}
       <div
@@ -123,15 +121,15 @@ export default function FinalCTASection() {
           />
 
           {/* TOP ACCENT */}
-          <div className="absolute inset-x-12 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent sm:inset-x-24" />
+          <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent sm:inset-x-16 lg:inset-x-24" />
 
-          <div className="relative grid items-center gap-10 px-5 py-10 sm:px-10 sm:py-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12 lg:px-14 lg:py-16">
+          <div className="relative grid grid-cols-1 items-center gap-10 px-5 py-9 sm:px-8 sm:py-12 md:px-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-10 lg:px-12 lg:py-14 xl:gap-12 xl:px-14 xl:py-16">
             {/* LEFT CONTENT */}
-            <div>
+            <div className="min-w-0">
               {/* EYEBROW */}
-              <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/[0.06] px-3.5 py-2 text-[10px] font-extrabold uppercase tracking-[0.2em] text-cyan-200 sm:text-xs">
-                <Sparkles size={14} />
-                Your Next Chapter Starts Here
+              <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/[0.06] px-3.5 py-2 text-[10px] font-extrabold uppercase tracking-[0.16em] text-cyan-200 sm:text-xs sm:tracking-[0.2em]">
+                <Sparkles size={14} className="shrink-0" />
+                <span>Your Next Chapter Starts Here</span>
               </div>
 
               {/* HEADLINE */}
@@ -145,8 +143,8 @@ export default function FinalCTASection() {
               {/* DESCRIPTION */}
               <p className="mt-5 max-w-xl text-sm leading-7 text-slate-300 sm:text-base">
                 Turn your knowledge into practical experience through
-                real-world projects, guided mentorship, and
-                career-focused learning.
+                real-world projects, guided mentorship, and career-focused
+                learning.
               </p>
 
               {/* ACTIONS */}
@@ -174,184 +172,186 @@ export default function FinalCTASection() {
                   className="mt-0.5 shrink-0 text-cyan-300/80"
                 />
 
-                <p>
-                  Explore program details, fees, eligibility, and
-                  applicable terms before registering.
+                <p className="min-w-0">
+                  Explore program details, fees, eligibility, and applicable
+                  terms before registering.
                 </p>
               </div>
             </div>
 
             {/* RIGHT VISUAL */}
-            <div className="relative mx-auto w-full max-w-md">
-              {/* ORBIT RINGS */}
-              <div className="relative mx-auto flex aspect-square w-full max-w-[340px] items-center justify-center">
-                <motion.div
-                  aria-hidden="true"
-                  className="absolute inset-[8%] rounded-full border border-cyan-300/10"
-                  animate={reduceMotion ? {} : { rotate: 360 }}
-                  transition={{
-                    duration: 45,
-                    repeat: Infinity,
-                    ease: "linear",
-                  }}
-                />
+            <div className="mx-auto w-full min-w-0 max-w-md lg:max-w-none">
+              <div className="relative mx-auto w-full max-w-[390px]">
+                {/* ORBIT VISUAL */}
+                <div className="relative mx-auto flex aspect-square w-full items-center justify-center">
+                  <motion.div
+                    aria-hidden="true"
+                    className="absolute inset-[8%] rounded-full border border-cyan-300/10"
+                    animate={reduceMotion ? {} : { rotate: 360 }}
+                    transition={{
+                      duration: 45,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  />
 
-                <motion.div
-                  aria-hidden="true"
-                  className="absolute inset-[19%] rounded-full border border-dashed border-violet-300/20"
-                  animate={reduceMotion ? {} : { rotate: -360 }}
-                  transition={{
-                    duration: 55,
-                    repeat: Infinity,
-                    ease: "linear",
-                  }}
-                />
+                  <motion.div
+                    aria-hidden="true"
+                    className="absolute inset-[19%] rounded-full border border-dashed border-violet-300/20"
+                    animate={reduceMotion ? {} : { rotate: -360 }}
+                    transition={{
+                      duration: 55,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  />
 
-                <div className="absolute h-[70%] w-[70%] rounded-full bg-gradient-to-br from-cyan-300/[0.08] to-violet-400/[0.08] blur-2xl" />
+                  <div className="absolute h-[70%] w-[70%] rounded-full bg-gradient-to-br from-cyan-300/[0.08] to-violet-400/[0.08] blur-2xl" />
 
-                {/* CENTRAL GROWZEAL BRAND MARK */}
-                <motion.div
-                  animate={reduceMotion ? {} : { y: [0, -7, 0] }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="relative z-10 flex h-28 w-28 flex-col items-center justify-center rounded-[2rem] border border-cyan-300/25 bg-gradient-to-br from-[#10283A] via-[#101A30] to-[#191532] shadow-[0_0_60px_rgba(34,227,214,0.10)] sm:h-32 sm:w-32"
-                >
-                  <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cyan-300/[0.08] to-transparent" />
+                  {/* CENTRAL BRAND MARK */}
+                  <motion.div
+                    animate={reduceMotion ? {} : { y: [0, -7, 0] }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="relative z-10 flex h-24 w-24 flex-col items-center justify-center rounded-[1.6rem] border border-cyan-300/25 bg-gradient-to-br from-[#10283A] via-[#101A30] to-[#191532] shadow-[0_0_60px_rgba(34,227,214,0.10)] sm:h-28 sm:w-28 lg:h-32 lg:w-32"
+                  >
+                    <div className="absolute inset-0 rounded-[1.6rem] bg-gradient-to-br from-cyan-300/[0.08] to-transparent" />
 
-                  <span className="relative text-4xl font-black tracking-[-0.12em] text-white sm:text-5xl">
-                    G<span className="text-cyan-300">Z</span>
-                  </span>
-
-                  <span className="relative mt-1 text-[9px] font-extrabold uppercase tracking-[0.18em] text-slate-400">
-                    GrowZeal
-                  </span>
-
-                  <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full border border-[#091426] bg-cyan-300 text-[#050B18]">
-                    <Sparkles size={12} />
-                  </span>
-                </motion.div>
-
-                {/* ORBITING DECORATIVE DOTS */}
-                <motion.span
-                  aria-hidden="true"
-                  className="absolute left-[15%] top-[25%] h-2.5 w-2.5 rounded-full bg-cyan-300 shadow-[0_0_16px_rgba(34,227,214,0.65)]"
-                  animate={
-                    reduceMotion
-                      ? {}
-                      : { y: [0, -9, 0], opacity: [0.5, 1, 0.5] }
-                  }
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                  }}
-                />
-
-                <motion.span
-                  aria-hidden="true"
-                  className="absolute bottom-[20%] right-[16%] h-2 w-2 rounded-full bg-violet-300 shadow-[0_0_16px_rgba(167,139,250,0.65)]"
-                  animate={
-                    reduceMotion
-                      ? {}
-                      : { y: [0, 8, 0], opacity: [0.4, 1, 0.4] }
-                  }
-                  transition={{
-                    duration: 3.5,
-                    repeat: Infinity,
-                  }}
-                />
-
-                {/* FLOATING FEATURE: PROJECTS */}
-                <motion.div
-                  animate={reduceMotion ? {} : { y: [0, -5, 0] }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute left-0 top-[18%] z-20 rounded-xl border border-white/10 bg-[#0B1729]/95 p-3 shadow-xl backdrop-blur-xl sm:-left-2"
-                >
-                  <div className="flex items-center gap-2.5">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-cyan-300/10 text-cyan-300">
-                      <Code2 size={17} />
+                    <span className="relative text-4xl font-black tracking-[-0.12em] text-white sm:text-5xl">
+                      G<span className="text-cyan-300">Z</span>
                     </span>
 
-                    <div>
-                      <p className="text-[10px] font-bold text-white sm:text-xs">
-                        Real-World Projects
-                      </p>
-                      <p className="mt-1 text-[9px] text-slate-400">
-                        Learn by building
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* FLOATING FEATURE: MENTORSHIP */}
-                <motion.div
-                  animate={reduceMotion ? {} : { y: [0, 6, 0] }}
-                  transition={{
-                    duration: 4.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute right-0 top-[35%] z-20 rounded-xl border border-violet-300/15 bg-[#0B1729]/95 p-3 shadow-xl backdrop-blur-xl sm:-right-2"
-                >
-                  <div className="flex items-center gap-2.5">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-violet-300/10 text-violet-300">
-                      <GraduationCap size={17} />
+                    <span className="relative mt-1 text-[9px] font-extrabold uppercase tracking-[0.18em] text-slate-400">
+                      GrowZeal
                     </span>
 
-                    <div>
-                      <p className="text-[10px] font-bold text-white sm:text-xs">
-                        Guided Mentorship
-                      </p>
-                      <p className="mt-1 text-[9px] text-slate-400">
-                        Learn with direction
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* FLOATING FEATURE: CAREER */}
-                <motion.div
-                  animate={reduceMotion ? {} : { y: [0, -5, 0] }}
-                  transition={{
-                    duration: 4.2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute bottom-[13%] left-1/2 z-20 -translate-x-1/2 rounded-xl border border-cyan-300/15 bg-[#0B1729]/95 p-3 shadow-xl backdrop-blur-xl"
-                >
-                  <div className="flex items-center gap-2.5">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-300/10 text-emerald-300">
-                      <TrendingUp size={17} />
+                    <span className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full border border-[#091426] bg-cyan-300 text-[#050B18]">
+                      <Sparkles size={12} />
                     </span>
+                  </motion.div>
 
-                    <div>
-                      <p className="text-[10px] font-bold text-white sm:text-xs">
-                        Career Development
-                      </p>
-                      <p className="mt-1 text-[9px] text-slate-400">
-                        Build your next step
-                      </p>
+                  {/* PROJECTS CARD */}
+                  <motion.div
+                    animate={reduceMotion ? {} : { y: [0, -5, 0] }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="absolute left-0 top-[13%] z-20 max-w-[46%] rounded-xl border border-white/10 bg-[#0B1729]/95 p-2.5 shadow-xl backdrop-blur-xl sm:left-[1%] sm:p-3"
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-cyan-300/10 text-cyan-300 sm:h-8 sm:w-8">
+                        <Code2 size={16} />
+                      </span>
+
+                      <div className="min-w-0">
+                        <p className="break-words text-[9px] font-bold leading-4 text-white sm:text-xs">
+                          Real-World Projects
+                        </p>
+                        <p className="mt-0.5 text-[9px] leading-4 text-slate-400">
+                          Learn by building
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+
+                  {/* MENTORSHIP CARD - MOVED RIGHT AND DOWN */}
+                  <motion.div
+                    animate={reduceMotion ? {} : { y: [0, 6, 0] }}
+                    transition={{
+                      duration: 4.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="absolute right-0 top-[48%] z-20 hidden max-w-[44%] rounded-xl border border-violet-300/15 bg-[#0B1729]/95 p-2.5 shadow-xl backdrop-blur-xl sm:block sm:right-[2%] sm:top-[46%] sm:max-w-[42%] sm:p-3"
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-violet-300/10 text-violet-300 sm:h-8 sm:w-8">
+                        <GraduationCap size={16} />
+                      </span>
+
+                      <div className="min-w-0">
+                        <p className="break-words text-[9px] font-bold leading-4 text-white sm:text-xs">
+                          Guided Mentorship
+                        </p>
+                        <p className="mt-0.5 text-[9px] leading-4 text-slate-400">
+                          Learn with direction
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* CAREER CARD */}
+                  <motion.div
+                    animate={reduceMotion ? {} : { y: [0, -5, 0] }}
+                    transition={{
+                      duration: 4.2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="absolute bottom-[10%] left-1/2 z-20 w-max max-w-[82%] -translate-x-1/2 rounded-xl border border-cyan-300/15 bg-[#0B1729]/95 p-2.5 shadow-xl backdrop-blur-xl sm:p-3"
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-emerald-300/10 text-emerald-300">
+                        <TrendingUp size={16} />
+                      </span>
+
+                      <div className="min-w-0">
+                        <p className="text-[10px] font-bold leading-4 text-white sm:text-xs">
+                          Career Development
+                        </p>
+                        <p className="mt-0.5 text-[9px] leading-4 text-slate-400">
+                          Build your next step
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* DECORATIVE DOTS */}
+                  <motion.span
+                    aria-hidden="true"
+                    className="absolute left-[15%] top-[25%] h-2.5 w-2.5 rounded-full bg-cyan-300 shadow-[0_0_16px_rgba(34,227,214,0.65)]"
+                    animate={
+                      reduceMotion
+                        ? {}
+                        : { y: [0, -9, 0], opacity: [0.5, 1, 0.5] }
+                    }
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                    }}
+                  />
+
+                  <motion.span
+                    aria-hidden="true"
+                    className="absolute bottom-[20%] right-[16%] h-2 w-2 rounded-full bg-violet-300 shadow-[0_0_16px_rgba(167,139,250,0.65)]"
+                    animate={
+                      reduceMotion
+                        ? {}
+                        : { y: [0, 8, 0], opacity: [0.4, 1, 0.4] }
+                    }
+                    transition={{
+                      duration: 3.5,
+                      repeat: Infinity,
+                    }}
+                  />
+                </div>
+
+                {/* VISUAL CAPTION */}
+                <p className="mx-auto mt-1 max-w-xs text-center text-[10px] leading-5 text-slate-500 sm:text-xs">
+                  Learn with purpose. Build with confidence.
+                </p>
               </div>
-
-              {/* VISUAL CAPTION */}
-              <p className="mx-auto -mt-1 max-w-xs text-center text-[10px] leading-5 text-slate-500 sm:text-xs">
-                Learn with purpose. Build with confidence.
-              </p>
             </div>
           </div>
 
           {/* FEATURE STRIP */}
-          <div className="relative border-t border-white/[0.08] bg-black/[0.12] px-5 py-5 sm:px-10 sm:py-6 lg:px-14">
-            <div className="grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+          <div className="relative border-t border-white/[0.08] bg-black/[0.12] px-5 py-5 sm:px-8 sm:py-6 lg:px-12 xl:px-14">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
               {highlights.map((item, index) => {
                 const Icon = item.icon;
 
@@ -365,13 +365,13 @@ export default function FinalCTASection() {
                       duration: reduceMotion ? 0 : 0.4,
                       delay: reduceMotion ? 0 : index * 0.06,
                     }}
-                    className="flex min-w-0 items-center gap-2.5 sm:gap-3"
+                    className="flex min-w-0 items-center gap-3"
                   >
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-cyan-300/10 bg-cyan-300/[0.05] text-cyan-300">
                       <Icon size={17} />
                     </span>
 
-                    <span className="text-[11px] font-semibold leading-5 text-slate-300 sm:text-xs">
+                    <span className="min-w-0 break-words text-xs font-semibold leading-5 text-slate-300">
                       {item.label}
                     </span>
                   </motion.div>

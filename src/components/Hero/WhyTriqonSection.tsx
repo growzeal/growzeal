@@ -1,11 +1,10 @@
-
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+
 import {
   ArrowRight,
   Award,
-  BadgeCheck,
   BriefcaseBusiness,
   Check,
   Code2,
@@ -98,11 +97,10 @@ export default function WhyGrowZealSection() {
 
   return (
     <section
-      id="why-Triqon"
+      id="why-growzeal"
       className="relative isolate overflow-hidden bg-[#050B18] px-5 py-20 text-white sm:px-8 sm:py-24 lg:py-28"
     >
-      {/* SHARED TRI QOLO BACKGROUND */}
-
+      {/* Shared GrowZeal Background */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
@@ -115,17 +113,14 @@ export default function WhyGrowZealSection() {
             backgroundImage:
               "linear-gradient(rgba(148,163,184,0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.16) 1px, transparent 1px)",
             backgroundSize: "48px 48px",
-            maskImage:
-              "linear-gradient(to bottom, black, transparent 95%)",
+            maskImage: "linear-gradient(to bottom, black, transparent 95%)",
           }}
         />
 
         <motion.div
           className="absolute -left-32 top-24 h-80 w-80 rounded-full bg-violet-600/15 blur-[110px]"
           animate={
-            reduceMotion
-              ? {}
-              : { x: [0, 30, 0], y: [0, 20, 0] }
+            reduceMotion ? {} : { x: [0, 30, 0], y: [0, 20, 0] }
           }
           transition={{ duration: 14, repeat: Infinity }}
         />
@@ -133,9 +128,7 @@ export default function WhyGrowZealSection() {
         <motion.div
           className="absolute -right-32 bottom-10 h-96 w-96 rounded-full bg-cyan-400/10 blur-[110px]"
           animate={
-            reduceMotion
-              ? {}
-              : { x: [0, -25, 0], y: [0, -25, 0] }
+            reduceMotion ? {} : { x: [0, -25, 0], y: [0, -25, 0] }
           }
           transition={{ duration: 16, repeat: Infinity }}
         />
@@ -168,8 +161,7 @@ export default function WhyGrowZealSection() {
       </div>
 
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-        {/* LEFT: INTRODUCTION */}
-
+        {/* Left: Introduction */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -188,12 +180,11 @@ export default function WhyGrowZealSection() {
           </h2>
 
           <p className="mt-5 max-w-md text-sm leading-7 text-slate-300 sm:text-base">
-            Practical learning, real projects, and guidance designed
-            to help you take your next career step.
+            Practical learning, real projects, and guidance designed to help
+            you take your next career step.
           </p>
 
-          {/* LEARNING JOURNEY */}
-
+          {/* Learning Journey */}
           <div className="mt-7 flex flex-wrap items-center gap-2">
             {[
               { label: "Learn", color: "text-cyan-300" },
@@ -208,17 +199,13 @@ export default function WhyGrowZealSection() {
                 </span>
 
                 {index < 2 && (
-                  <ArrowRight
-                    size={13}
-                    className="text-slate-600"
-                  />
+                  <ArrowRight size={13} className="text-slate-600" />
                 )}
               </div>
             ))}
           </div>
 
-          {/* CERTIFICATE AND PPO */}
-
+          {/* Certificate and PPO */}
           <div className="mt-8 space-y-3">
             <div className="flex items-center gap-3 rounded-2xl border border-violet-300/15 bg-violet-300/[0.04] p-3.5">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-violet-300/10 text-violet-300">
@@ -258,17 +245,13 @@ export default function WhyGrowZealSection() {
           </div>
         </motion.div>
 
-        {/* RIGHT: BENEFIT ECOSYSTEM */}
-
+        {/* Right: Benefit Ecosystem */}
         <div className="relative">
-          {/* ORBIT DECORATION */}
-
+          {/* Orbit Decoration */}
           <motion.div
             aria-hidden="true"
             className="pointer-events-none absolute left-1/2 top-1/2 h-[110%] w-[110%] -translate-x-1/2 -translate-y-1/2 rounded-[38%] border border-cyan-300/[0.08]"
-            animate={
-              reduceMotion ? {} : { rotate: [0, 4, 0] }
-            }
+            animate={reduceMotion ? {} : { rotate: [0, 4, 0] }}
             transition={{
               duration: 12,
               repeat: Infinity,
@@ -281,15 +264,13 @@ export default function WhyGrowZealSection() {
             className="pointer-events-none absolute left-1/2 top-1/2 h-[95%] w-[95%] -translate-x-1/2 -translate-y-1/2 rotate-6 rounded-[35%] border border-dashed border-violet-300/10"
           />
 
-          {/* AMBIENT CORE */}
-
+          {/* Ambient Core */}
           <div
             aria-hidden="true"
             className="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/[0.07] blur-[70px] sm:h-80 sm:w-80"
           />
 
-          {/* BENEFIT CARDS */}
-
+          {/* Benefit Cards */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -321,8 +302,7 @@ export default function WhyGrowZealSection() {
                   }
                   className="group relative isolate flex min-h-[112px] items-center gap-3 overflow-hidden rounded-2xl border border-white/[0.09] bg-[#09182D]/85 p-4 shadow-lg shadow-black/10 backdrop-blur-xl transition-colors duration-300 hover:border-cyan-300/30 hover:bg-[#0B1E35]/95 sm:p-5"
                 >
-                  {/* CARD GLOW */}
-
+                  {/* Card Glow */}
                   <div
                     aria-hidden="true"
                     className={`pointer-events-none absolute -right-8 -top-8 -z-10 h-24 w-24 rounded-full ${benefit.glow} blur-2xl opacity-50 transition-opacity group-hover:opacity-100`}
@@ -349,16 +329,14 @@ export default function WhyGrowZealSection() {
                     className="shrink-0 text-cyan-300/70 transition-transform group-hover:scale-110 group-hover:text-cyan-200"
                   />
 
-                  {/* BOTTOM ACCENT */}
-
+                  {/* Bottom Accent */}
                   <div className="absolute bottom-0 left-4 right-4 h-px bg-gradient-to-r from-transparent via-cyan-300/20 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                 </motion.div>
               );
             })}
           </motion.div>
 
-          {/* FEATURED CAREER OPPORTUNITY */}
-
+          {/* Featured Career Opportunity */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -386,8 +364,8 @@ export default function WhyGrowZealSection() {
                 </div>
 
                 <p className="mt-2 text-xs leading-6 text-slate-400 sm:text-sm">
-                  Develop practical skills and create work you can
-                  showcase to future employers.
+                  Develop practical skills and create work you can showcase to
+                  future employers.
                 </p>
               </div>
 
@@ -419,8 +397,7 @@ export default function WhyGrowZealSection() {
             </p>
           </motion.div>
 
-          {/* BOTTOM BRAND SIGNATURE */}
-
+          {/* Bottom Brand Signature */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

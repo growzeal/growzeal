@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
@@ -10,20 +9,6 @@ const freeFeatureIndexes = [0, 2, 5, 7, 9];
 
 export default function ComparisonSection() {
   const shouldReduceMotion = useReducedMotion();
-
-  const hasPPO = comparisons.some((item) =>
-    item.title.toLowerCase().includes("ppo")
-  );
-
-  const features = hasPPO
-    ? comparisons
-    : [
-        ...comparisons,
-        {
-          title: "PPO Opportunity",
-          description: "Subject to eligibility and selection.",
-        },
-      ];
 
   return (
     <section
@@ -43,12 +28,13 @@ export default function ComparisonSection() {
           <SectionLabel>THE DIFFERENCE</SectionLabel>
 
           <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-            More Than Just an{" "}
-            <span className="text-cyan-400">Internship</span>
+            Compare Your{" "}
+            <span className="text-cyan-400">Learning Options</span>
           </h2>
 
           <p className="mt-3 text-sm leading-6 text-slate-300 sm:text-base">
-            Compare your options and choose what fits your goals.
+            Explore the available features and choose the program that fits
+            your learning goals.
           </p>
         </motion.div>
 
@@ -65,7 +51,7 @@ export default function ComparisonSection() {
               <div className="p-6">
                 <h3 className="text-lg font-bold">Compare Features</h3>
                 <p className="mt-1 text-sm text-slate-400">
-                  What matters for your growth
+                  Features available across programs
                 </p>
               </div>
 
@@ -88,7 +74,7 @@ export default function ComparisonSection() {
               </div>
             </div>
 
-            {features.map((feature, index) => (
+            {comparisons.map((feature, index) => (
               <div
                 key={`${feature.title}-${index}`}
                 className="grid grid-cols-[1.2fr_1fr_1fr] border-b border-white/[0.07] last:border-b-0"
@@ -97,6 +83,7 @@ export default function ComparisonSection() {
                   <p className="font-semibold text-slate-100">
                     {feature.title}
                   </p>
+
                   {feature.description && (
                     <p className="mt-1 text-sm text-slate-400">
                       {feature.description}
@@ -106,14 +93,23 @@ export default function ComparisonSection() {
 
                 <div className="flex items-center justify-center border-l border-white/10 p-5">
                   {freeFeatureIndexes.includes(index) ? (
-                    <Check className="h-5 w-5 text-emerald-400" />
+                    <Check
+                      aria-label="Available"
+                      className="h-5 w-5 text-emerald-400"
+                    />
                   ) : (
-                    <X className="h-5 w-5 text-slate-500" />
+                    <X
+                      aria-label="Not included"
+                      className="h-5 w-5 text-slate-500"
+                    />
                   )}
                 </div>
 
                 <div className="flex items-center justify-center border-l border-cyan-400/10 bg-cyan-400/[0.03] p-5">
-                  <Check className="h-5 w-5 text-cyan-300" />
+                  <Check
+                    aria-label="Available"
+                    className="h-5 w-5 text-cyan-300"
+                  />
                 </div>
               </div>
             ))}
@@ -141,7 +137,7 @@ export default function ComparisonSection() {
               </div>
             </div>
 
-            {features.map((feature, index) => (
+            {comparisons.map((feature, index) => (
               <div
                 key={`${feature.title}-${index}`}
                 className="border-b border-white/[0.07] p-4 last:border-b-0"
@@ -149,6 +145,12 @@ export default function ComparisonSection() {
                 <p className="mb-3 text-sm font-semibold text-slate-100">
                   {feature.title}
                 </p>
+
+                {feature.description && (
+                  <p className="mb-3 text-xs leading-5 text-slate-400">
+                    {feature.description}
+                  </p>
+                )}
 
                 <div className="grid grid-cols-2 gap-3">
                   <div className="flex items-center gap-2 text-xs text-slate-300">
@@ -180,11 +182,9 @@ export default function ComparisonSection() {
           </a>
 
           <p className="mx-auto mt-4 max-w-3xl text-xs leading-5 text-slate-500">
-            Check the selected program page for the exact fee,
-            inclusions, and refund policy before registering.
-            Certificates depend on completion requirements.
-            PPO consideration is subject to eligibility and selection
-            and is not guaranteed.
+            Program features and fees may vary. Check the selected program
+            page for its exact fee, inclusions, and refund policy before
+            registering.
           </p>
         </div>
       </div>
